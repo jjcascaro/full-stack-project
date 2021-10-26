@@ -5,12 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie | {{ movie.title }}</title>
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous">
+    <style type="text/css">
+        .box{
+            height: fit-content;
+            width: fit-content;
+            background-color:white;
+            margin: 100px;
+        }
+
+</style>
 </head>
-<body>
-    <h1>Displaying details for {{ movie.title }}</h1>
-    <h2>Date Released: {{ movie.date_released }}</h2>
-    <h2>Date Created: {{ movie.date_created }}</h2>
+<body style="background: antiquewhite">
+
+   
+
+    <h1>
+        <div class="container">
+            <div class="box border border-info border-top">
+                <div class="spinner-grow" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  Displaying details for {{ movie.title }}
+                
+            </div>
+        </div>
+       
+    </h1>
+    <h2>
+        <div class="container">
+            <div class="box border border-info border-top">
+                <div class="spinner-grow" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  Date Released: {{ movie.date_released }}
+                
+            </div>
+        </div>
+       
+    </h2>
+    <h2>
+        <div class="container">
+            <div class="box border border-info border-top">
+                <div class="spinner-grow" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  Date Created: {{ movie.date_created }}
+                
+            </div>
+        </div>
+        
+    </h2>
     <br />
-    <a href="{% url 'movie_update' movie.id %}">Update Movie</a>
+    <a href="{% url 'movie_update' movie.id %}" style="background-color:white;">Update Movie </a>
+
+    
 </body>
 </html>
